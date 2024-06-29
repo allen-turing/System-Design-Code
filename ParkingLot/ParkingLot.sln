@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking.API", "Parking.API\Parking.API.csproj", "{CFDAD4C8-080E-481E-B7E2-1C49C02A133D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ABB22B29-43DC-4384-8196-F7A3AAB22702}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingInfrastructure", "ParkingInfrastructure\ParkingInfrastructure.csproj", "{51464856-455C-4499-91C3-C43AE26CE07C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingApplication", "ParkingApplication\ParkingApplication.csproj", "{83A16C4E-271C-4EDA-B938-828374FB423A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingDomain", "ParkingDomain\ParkingDomain.csproj", "{D3321C18-1B81-4CBF-A178-7118EED3A9D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFDAD4C8-080E-481E-B7E2-1C49C02A133D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDAD4C8-080E-481E-B7E2-1C49C02A133D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDAD4C8-080E-481E-B7E2-1C49C02A133D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDAD4C8-080E-481E-B7E2-1C49C02A133D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51464856-455C-4499-91C3-C43AE26CE07C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51464856-455C-4499-91C3-C43AE26CE07C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51464856-455C-4499-91C3-C43AE26CE07C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51464856-455C-4499-91C3-C43AE26CE07C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A16C4E-271C-4EDA-B938-828374FB423A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A16C4E-271C-4EDA-B938-828374FB423A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A16C4E-271C-4EDA-B938-828374FB423A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A16C4E-271C-4EDA-B938-828374FB423A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3321C18-1B81-4CBF-A178-7118EED3A9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3321C18-1B81-4CBF-A178-7118EED3A9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3321C18-1B81-4CBF-A178-7118EED3A9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3321C18-1B81-4CBF-A178-7118EED3A9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+﻿services:
+  parkinglot:
+    image: parkinglot
+    build:
+      context: .
+      dockerfile: ParkingLot/Dockerfile
