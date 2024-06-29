@@ -17,9 +17,12 @@ public class ParkingService : IParkingService
 
     public async Task<int> CreateParkingSlot(ParkingSlotCreationRequest request)
     {
+
         var availabilitySlotDetails = await _parkingDbContext.ParkingSlot
-            .Where(_ => _.VehicleId == null && _.FloorId == request.FloorId)
+            .FromSqlRaw(
+                $"SELECT * FROM ParkingSlot where VehicleId is null and FloorId = {request.FloorId} for update")
             .FirstOrDefaultAsync();
+        
 
         if (availabilitySlotDetails is null)
         {
