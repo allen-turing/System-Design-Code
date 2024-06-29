@@ -24,6 +24,13 @@ public class ParkingLotController: ControllerBase
         return await _parkingService.CreateParkingSlot(request);
     }
     
+    [HttpPost]
+    [Route("vacate-parking/{vehicleNumber}")]
+    public async Task<int> VacateParkingSlot([FromRoute]string vehicleNumber)
+    {
+        return await _parkingService.VacateParkingSlot(vehicleNumber);
+    }
+    
     [HttpGet]
     [Route("available-slots")]
     public async Task<IEnumerable<FloorWiseAvailableDetail>> GetAllParkingAvailability()

@@ -45,6 +45,34 @@ public class ParkingService : IParkingService
         return availabilitySlotDetails.ParkingSlotId;
     }
     
+    public async Task<int> VacateParkingSlot(string vehicleNumber)
+    {
+        var vehicleDetail = await _parkingDbContext.Vehicle
+            .Where(_ => _.VehicleNumber == vehicleNumber)
+            .FirstOrDefaultAsync();
+        if (vehicleDetail is null)
+        {
+            throw new Exception($"Vehicle Is not found");
+        }
+
+        var availabilitySlotDetails = await _parkingDbContext.ParkingSlot
+            .Where(_ => _.VehicleId == vehicleDetail.Id)
+            .FirstOrDefaultAsync();
+        
+        if (availabilitySlotDetails is null)
+        {
+            throw new Exception($"Vehicle Is not parked");
+        }
+        
+        vehicleDetail.EntryTime = DateTime.Now;
+        _parkingDbContext.Update(vehicleDetail);
+        availabilitySlotDetails.VehicleId = null;
+        _parkingDbContext.Update(availabilitySlotDetails);
+        await _parkingDbContext.SaveChangesAsync();
+        
+        return availabilitySlotDetails.ParkingSlotId;
+    }
+    
     public async Task<IEnumerable<FloorWiseAvailableDetail>> GetParkingAvailability()
     {
         var availabilitySlotDetails = await _parkingDbContext.ParkingSlot
