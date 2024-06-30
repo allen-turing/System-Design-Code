@@ -1,4 +1,4 @@
-﻿namespace ChessGame
+﻿namespace ChessGame.ChessPieces
 {
 	public static class PieceType
 	{

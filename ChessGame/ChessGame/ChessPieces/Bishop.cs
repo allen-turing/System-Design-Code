@@ -1,4 +1,4 @@
-﻿namespace ChessGame
+﻿namespace ChessGame.ChessPieces
 {
 	public class Bishop : Piece
 	{

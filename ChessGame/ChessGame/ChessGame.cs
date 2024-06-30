@@ -1,5 +1,6 @@
 ﻿namespace ChessGame
 {
+	using global::ChessGame.ChessPieces;
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;

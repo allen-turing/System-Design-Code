@@ -1,4 +1,6 @@
-﻿namespace ChessGame
+﻿using ChessGame.ChessPieces;
+
+namespace ChessGame
 {
 	public static class PieceFactory
 	{

@@ -1,25 +1,11 @@
-﻿namespace ChessGame
+﻿namespace ChessGame.ChessPieces
 {
-	public class King : Piece
+	public class Knight : Piece
 	{
 		private static readonly (int, int)[] SpotIncrements =
-			{ (1, -1), (1, 0), (1, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1) };
+			{ (1, 2), (2, 1), (2, -1), (1, -2), (-1, -2), (-2, -1), (-2, 1), (-1, 2) };
 
-		private ChessBoard _boardHandle;
-
-		public King(ChessPosition position, string color) : base(position, color) { }
-
-		public void SetBoardHandle(ChessBoard board)
-		{
-			_boardHandle = board;
-			_boardHandle.RegisterKingPosition(Position, Color);
-		}
-
-		public override void Move(ChessPosition targetPosition)
-		{
-			base.Move(targetPosition);
-			_boardHandle.RegisterKingPosition(targetPosition, Color);
-		}
+		public Knight(ChessPosition position, string color) : base(position, color) { }
 
 		public override List<ChessPosition> GetThreatenedPositions(ChessBoard board)
 		{
@@ -37,7 +23,7 @@
 				.ToList();
 		}
 
-		protected override string SymbolImpl() => "Ki";
+		protected override string SymbolImpl() => "Kn";
 	}
 
 }
